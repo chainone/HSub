@@ -22,7 +22,7 @@ sampleHash h offset = do
 
 allSampleHash :: Handle -> Integer -> IO [MD5Digest]
 allSampleHash h size = case offsets size of Nothing -> error "The file size must be larger than 8 KB"
-                                            Just os -> mapM id $ fmap (sampleHash h) os
+                                            Just os -> sequence $ fmap (sampleHash h) os
 
 
 fileHash :: FilePath -> IO String
