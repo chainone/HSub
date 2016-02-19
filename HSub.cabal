@@ -21,6 +21,8 @@ library
                      , bytestring
                      , pureMD5
                      , HTTP
+                     , url
+                     , network-uri
   default-language:    Haskell2010
 
 executable HSub-exe

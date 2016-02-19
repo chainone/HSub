@@ -7,6 +7,5 @@ import ShooterSubQuery
 main = do
    (path:_) <- getArgs
    hashString <- fileHash path
-   putStrLn $ "The final hash for file " ++ path ++ " is:"
-   putStrLn hashString
-   testFetch
+   -- putStrLn $ "The final hash for file " ++ path ++ " is:" ++ hashString
+   requestSubResult hashString path >>= putStrLn
