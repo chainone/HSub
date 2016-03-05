@@ -17,12 +17,14 @@ library
   hs-source-dirs:      src
   exposed-modules:     ShooterFileHash
                      , ShooterSubQuery
+                     , ShooterSubQueryResult
   build-depends:       base >= 4.7 && < 5
                      , bytestring
                      , pureMD5
                      , HTTP
                      , url
                      , network-uri
+                     , aeson
   default-language:    Haskell2010
 
 executable HSub-exe

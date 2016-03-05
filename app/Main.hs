@@ -8,4 +8,4 @@ main = do
    (path:_) <- getArgs
    hashString <- fileHash path
    -- putStrLn $ "The final hash for file " ++ path ++ " is:" ++ hashString
-   requestSubResult hashString path >>= putStrLn
+   requestSubResult hashString path >>= (putStrLn . show)
