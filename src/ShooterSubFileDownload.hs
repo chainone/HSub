@@ -49,4 +49,4 @@ downloadSubFiles dfn qrs = do
          let subfiles = collectSubFiles qrs
          putStrLn $ "Matched " ++ (show . length) subfiles ++ " subtitles on server"
          putStrLn "downloading subtitle files..."
-         mapM_ (uncurry $ downloadSubFile dfn) (zip [1,2..] subfiles)
+         mapM_ (uncurry $ downloadSubFile dfn) (zip [0,1..] subfiles)

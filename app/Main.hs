@@ -32,4 +32,5 @@ downloadSubFilesForFile fp = if isMediaFile fp then downloadSubFilesForMediaFile
 
 main = do
    paths <- getArgs
-   mapM_ downloadSubFilesForMediaFile paths
+   if null paths then putStrLn "No input media files"
+                  else mapM_ downloadSubFilesForMediaFile paths
