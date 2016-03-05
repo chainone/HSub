@@ -2,6 +2,9 @@
 module ShooterSubQueryResult
     ( SubQueryResult
     , SubFile
+    , ext
+    , link
+    , files
     , decodeSubQueryResult
     ) where
 
