@@ -18,13 +18,13 @@ import Control.Applicative
 data SubFile =
       SubFile {
         ext :: String
-      , link :: URL
+      , link :: String
    } deriving Show
 
 instance FromJSON SubFile where
    parseJSON (Object v) =
     SubFile <$> v .: "Ext"
-            <*> (fromJust . importURL <$> v .: "Link")
+            <*> v .: "Link"
    parseJSON _ = mzero
 
 
