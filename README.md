@@ -4,7 +4,7 @@ A Haskell-made tiny command line tool to download subtitles from shooter
 
 # Motivation
 2 years ago I used C++ to write such tool (SubD: https://github.com/chainone/SubD ) for my NAS to download subtitles automatically when a movie just finishes downloading.     
-Right now, as I am learning Haskell, I think that would be interesting if I wrote the same tool using Haskell
+Right now, as I am learning Haskell, I think that would be interesting if I wrote the same tool using Haskell and do a comparison.
 
 # C++ version vs Haskell version    
 Lines of code:     
