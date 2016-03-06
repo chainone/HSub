@@ -18,11 +18,10 @@ isMediaFile fp = elem (lowercase $ takeExtension fp) mediaFileExtensions
 
 downloadSubFilesForMediaFile :: FilePath -> IO ()
 downloadSubFilesForMediaFile fp = do
-   let fileName = takeFileName fp
-   putStrLn $ "Start to retrieve subtitles for media file: " ++ fileName
+   putStrLn $ "Start to retrieve subtitles for media file: " ++ takeFileName fp
    hashString <- fileHash fp
    rets <- requestSubResult hashString fp
-   case rets of Right queryResults -> downloadSubFiles (dropExtension fileName) queryResults
+   case rets of Right queryResults -> downloadSubFiles fp queryResults
                 Left errorMessage -> putStrLn errorMessage
 
 downloadSubFilesForFile :: FilePath -> IO ()

@@ -31,17 +31,17 @@ addFileIndexToFileName :: Int -> FilePath -> FilePath
 addFileIndexToFileName idx p = dropExtension p ++ "_" ++ show idx ++ takeExtension p
 
 saveResponseAsFile :: String -> Int ->  Response DB.ByteString -> IO ()
-saveResponseAsFile dfn idx rsp = do
-   let fn = fromMaybe dfn $ addFileIndexToFileName idx <$> getFileName rsp
+saveResponseAsFile dfp idx rsp = do
+   let fn = fromMaybe dfp $  (dropFileName dfp </>) . addFileIndexToFileName idx <$> getFileName rsp
    DB.writeFile fn $ rspBody rsp
-   putStrLn $ "Downloaded sub file: " ++ fn
+   putStrLn $ "Downloaded sub file: " ++ takeFileName fn
 
 downloadSubFile :: String -> Int -> SubFile -> IO ()
-downloadSubFile dfn idx f =  do
+downloadSubFile mfp idx f =  do
    responseResult <- (simpleHTTP . defaultGETRequest_ . fromJust . parseURI . replaceHttpsWithHttp .link) f :: IO (Result (Response DB.ByteString))
-   let defaultFileName = dfn ++ "." ++ ext f
-   case responseResult of Right rsp -> saveResponseAsFile defaultFileName idx rsp
-                          Left error -> putStrLn $ "Error downloading sub file: " ++ defaultFileName ++ "error: " ++ show error
+   let defaultFilePath = dropExtension mfp ++ "." ++ ext f
+   case responseResult of Right rsp -> saveResponseAsFile defaultFilePath idx rsp
+                          Left error -> putStrLn $ "Error downloading sub file: " ++ takeFileName defaultFilePath ++ "error: " ++ show error
 
 
 downloadSubFiles :: String -> [SubQueryResult] -> IO ()
