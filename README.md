@@ -6,14 +6,14 @@ A Haskell-made tiny command line tool to download subtitles from shooter
 Binaries for Mac OSX & Ubuntu have been pre-built and placed under folder "bin". You can directly copy this binary to /usr/local/bin or anywhere you want    
 
 # Usage
-example: hsub ~/Movies/The.Martian.2015.1080p.WEB-DL.DD5.1.H264-RARBG/*.mkv    
+example: hsub ~/Movies/The.MMMM.2015.1080p.WEB-DL.DD5.1.H264-XXXX/*.mkv    
 result:     
-Start to retrieve subtitles for media file: The.Martian.2015.1080p.WEB-DL.DD5.1.H264-RARBG.mkv    
+Start to retrieve subtitles for media file: The.MMMM.2015.1080p.WEB-DL.DD5.1.H264-XXXX.mkv    
 Matched 3 subtitles on server    
 downloading subtitle files...    
-Downloaded sub file: The.Martian.2015.1080p.WEB-DL.DD5.1.H264-RARBG_0.ass    
-Downloaded sub file: The.Martian.2015.1080p.WEB-DL.DD5.1.H264-RARBG_1.ass    
-Downloaded sub file: The.Martian.2015.1080p.WEB-DL.DD5.1.H264-RARBG_2.srt    
+Downloaded sub file: The.MMMM.2015.1080p.WEB-DL.DD5.1.H264-XXXX_0.ass    
+Downloaded sub file: The.MMMM.2015.1080p.WEB-DL.DD5.1.H264-XXXX_1.ass    
+Downloaded sub file: The.MMMM.2015.1080p.WEB-DL.DD5.1.H264-XXXX_2.srt    
 
 # How to Build
 1. Install Haskell Stack: http://docs.haskellstack.org/en/stable/README/    
