@@ -5,6 +5,10 @@ A Haskell-made tiny command line tool to download subtitles from shooter
 # How to Install
 Binaries for Mac OSX & Ubuntu have been pre-built and placed under folder "bin". You can directly copy this binary to /usr/local/bin or anywhere you want    
 
+# 使用指南
+Mac OSX和Ubuntu的用户可以直接把bin目录下的hsub文件直接拷贝到系统目录下来使用，比如/usr/local/bin下面    
+命令使用非常简单, 比如: hsub ~/Movies/The.MMMM.2015.1080p.WEB-DL.DD5.1.H264-XXXX.mkv     
+
 # Usage
 example: hsub ~/Movies/The.MMMM.2015.1080p.WEB-DL.DD5.1.H264-XXXX/*.mkv    
 result:     
