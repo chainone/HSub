@@ -8,12 +8,12 @@ Binaries for Mac OSX & Ubuntu have been pre-built and placed under folder "bin".
 # Usage
 example: hsub ~/Movies/The.Martian.2015.1080p.WEB-DL.DD5.1.H264-RARBG/*.mkv
 result:     
-```Start to retrieve subtitles for media file: The.Martian.2015.1080p.WEB-DL.DD5.1.H264-RARBG.mkv
-Matched 3 subtitles on server
-downloading subtitle files...
-Downloaded sub file: The.Martian.2015.1080p.WEB-DL.DD5.1.H264-RARBG_0.ass
-Downloaded sub file: The.Martian.2015.1080p.WEB-DL.DD5.1.H264-RARBG_1.ass
-Downloaded sub file: The.Martian.2015.1080p.WEB-DL.DD5.1.H264-RARBG_2.srt```
+```Start to retrieve subtitles for media file: The.Martian.2015.1080p.WEB-DL.DD5.1.H264-RARBG.mkv    
+Matched 3 subtitles on server    
+downloading subtitle files...    
+Downloaded sub file: The.Martian.2015.1080p.WEB-DL.DD5.1.H264-RARBG_0.ass    
+Downloaded sub file: The.Martian.2015.1080p.WEB-DL.DD5.1.H264-RARBG_1.ass    
+Downloaded sub file: The.Martian.2015.1080p.WEB-DL.DD5.1.H264-RARBG_2.srt    ```
 
 
 # How to Build
